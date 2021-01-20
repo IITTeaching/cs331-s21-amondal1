@@ -4,7 +4,7 @@
 
 # Change this function
 def my_palindrome():
-    return 'level'
+    return 'level' 
 
 # Do not change the main method
 def main():
