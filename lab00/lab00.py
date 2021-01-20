@@ -1,6 +1,10 @@
+#Abheek Mondal
+#CS 331
+#20 - Jan 2021
+
 # Change this function
 def my_palindrome():
-    return ''
+    return 'level'
 
 # Do not change the main method
 def main():
