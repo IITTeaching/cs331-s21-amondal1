@@ -1,6 +1,6 @@
 #Abheek Mondal
 #CS 331
-#20 - Jan 2021
+#20 - Jan 2021 
 
 # Change this function
 def my_palindrome():
