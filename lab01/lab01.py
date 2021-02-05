@@ -88,6 +88,21 @@ def test3():
 
 # implement this function
 def gen_pattern(chars):
+    max=len(chars)*2-1
+    def ques(a,b):
+        line_a="".join(reversed(a))[:b]
+        sentence=line_a+"".join(reversed(line_a))[1:]
+        return sentence
+    maxlen= len(".".join(ques(chars,len(chars))))
+    for i in range(1,int(max/2+1)):
+        c=ques(chars,i)
+        patterm=".".join(c).center(maxlen,".")
+        print(patterm)
+    for i in range(int(max/2+1),0,-1):
+        c=ques(chars,i)
+        paterm=".".join(c).center(maxlen,".")
+        print(paterm)
+         
     pass
 
 def test4():
