@@ -39,7 +39,7 @@ def compute_ngrams(toks, n=2):
         if(toks[ngrams] in Dict):
             Dict[toks[ngrams]].append(tuple(toks[ngrams + 1:ngrams + n]))
     
-    print(Dict)
+    ##print(Dict) 
     return(Dict)   
     pass
 
@@ -100,6 +100,17 @@ def test1_2():
 ################################################################################
 # Implement this function
 def gen_passage(ngram_dict, length=100):
+    word = random.choice(sorted(ngram_dict.keys()))
+    paragraph = [word]
+    while(len(paragraph)<length):
+        paragraph.append(" ".join(random.choice(ngram_dict[word])))
+        word = paragraph[-1]
+        if(word not in ngram_dict):
+            word = random.choice(sorted(ngram_dict.keys()))
+            paragraph.append(word)
+    #print(" ".join(paragraph))
+    #print(word)
+    return(" ".join(paragraph))
     pass
 
 # 50 Points
